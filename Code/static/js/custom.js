@@ -242,38 +242,40 @@
     this.tick();
     this.isDeleting = true;
   };
-   
+
   TxtRotate.prototype.tick = function() {
     var i = this.loopNum % this.toRotate.length;
     var fullTxt = this.toRotate[i];
-   
+
     if (this.isDeleting) {
       this.txt = fullTxt.substring(0, this.txt.length - 1);
     } else {
       this.txt = fullTxt.substring(0, this.txt.length + 1);
     }
-   
-    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-   
+
+    this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
     var that = this;
-    var delta = 300 - Math.random() * 100;
-   
-    if (this.isDeleting) { delta /= 2; }
-   
+    var delta = 80; // Base typing speed (lower value = faster)
+
+    if (this.isDeleting) {
+      delta *= 1; // Slow down erasing speed (multiply by desired factor)
+    }
+
     if (!this.isDeleting && this.txt === fullTxt) {
-      delta = this.period;
+      delta = this.period + 1000; // Longer delay between typing and erasing (add desired delay)
       this.isDeleting = true;
     } else if (this.isDeleting && this.txt === '') {
       this.isDeleting = false;
       this.loopNum++;
-      delta = 100;
+      delta = 0; // Increase erasing speed (lower value = faster)
     }
-   
+
     setTimeout(function() {
       that.tick();
     }, delta);
   };
-   
+
   window.onload = function() {
     var elements = document.getElementsByClassName('txt-rotate');
     for (var i=0; i<elements.length; i++) {
@@ -283,12 +285,14 @@
         new TxtRotate(elements[i], JSON.parse(toRotate), period);
       }
     }
+
     // INJECT CSS
     var css = document.createElement("style");
     css.type = "text/css";
     css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
     document.body.appendChild(css);
   };
+
 // End of autotyping header text.  
 
 
