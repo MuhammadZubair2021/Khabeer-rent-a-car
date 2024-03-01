@@ -39,9 +39,6 @@
     }
   });
 
-  // Scroll animation init
-  window.sr = new scrollReveal();
-
   // Menu Dropdown Toggle
   if ($(".menu-trigger").length) {
     $(".menu-trigger").on("click", function() {
