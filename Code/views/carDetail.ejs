@@ -83,7 +83,7 @@
               
 
               <% if(sentCar.status === 'Available'){ %> 
-                <a href="/vehicles/reserveCar/withIds/<%= sentCar._id %>" 
+                <a href="#" 
                   class="underConstructionBtn btn btn-block btn-primary rounded-pill">
                   Awesome, Let's Book This Car</a>
                 <% } else{ %> 
@@ -144,8 +144,8 @@
           </p>
           
           <% if(sentCar.status === 'Available'){ %> 
-            <a href="/vehicles/reserveCar/withIds/<%= sentCar._id %>" 
-            class="btn btn-block btn-primary rounded-pill">Let's Try Booking This</a>
+            <a href="#" 
+            class="underConstructionBtn btn btn-block btn-primary rounded-pill">Let's Try Booking This</a>
             <% } else{ %>
             <a href="#" class=" btn btn-block btn-secondary rounded-pill" 
             disabled="true"
