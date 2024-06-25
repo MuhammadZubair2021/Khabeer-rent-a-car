@@ -1,0 +1,27 @@
+[{
+  "_id": {
+    "$oid": "64b4f2a2e6a6793dd4649827"
+  },
+  "internalImages": [],
+  "feedbacks": [
+    {
+      "$oid": "64b628b108d0d20c841c4a27"
+    },
+    {
+      "$oid": "64b628ec08d0d20c841c4a40"
+    }
+  ],
+  "fullName": "Honda Civic",
+  "displayImage": "uploads\\hondaCivic.jpg",
+  "model": "2020",
+  "drivingMode": "Auto",
+  "rentPerDay": 4500,
+  "airCondition": "Yes",
+  "engineCapacity": "1800 CC",
+  "seatCapacity": "5 Seater",
+  "colour": "Black",
+  "details": "Honda civic is powered by a 1800 cc engine having 6500 RPM. It's dimension in mm are 4656 x 1799 x 1433 (LxWxH). It's wheelbase is 2700 mm. The vehicle has an automatic transmission. It can carry fiver person in it.",
+  "status": "Available",
+  "hide": false,
+  "__v": 2
+}]

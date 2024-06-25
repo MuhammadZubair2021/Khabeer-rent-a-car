@@ -1,0 +1,15 @@
+[{
+  "_id": {
+    "$oid": "648c45b7dc103e07e047bb57"
+  },
+  "fullName": "Bangash Rent a Car",
+  "ownerDetails": {
+    "id": {
+      "$oid": "648c304bd4083371656e4803"
+    }
+  },
+  "address": "Saddar, Peshawar, KPK",
+  "email": "abc2023@serviceprovider.com",
+  "phoneNumber": "03319844648",
+  "__v": 0
+}]
